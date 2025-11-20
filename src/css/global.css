@@ -1,0 +1,15 @@
+/* Remove o botão de mostrar senha padrão do Chrome, Edge, Opera */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-textfield-decoration-container,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+  visibility: hidden;
+}
+
+input[type="password"] {
+  -webkit-text-security: disc; /* mantém o comportamento de senha */
+}
